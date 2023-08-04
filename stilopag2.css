@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+/* ----------------------------------------------------------------- Espaçamento Geral --------------------------------------------------------------- */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace
+}
+
+body::-webkit-scrollbar {
+    overflow-y: scroll; 
+    width: 0px;
+}
+
+
+/* ----------------------------------------------------------------- Primeiro container --------------------------------------------------------------- */
+
+.container1{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffffff;
+    
+}
+
+/* ------------ Barra de navegação ------------ */
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    line-height: 80px;
+    z-index: 111;
+}
+
+.logo {
+    display: flex;
+    font-size: 40px;
+    font-style:italic;
+    font-weight: lighter;
+    color: #232c39;
+    letter-spacing: 4px;
+    cursor: pointer;
+    font-family: 'Caveat', cursive;
+}
+
+.navItems {
+    display: flex;
+}
+
+.navItems li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navItems li a {
+    font-size: 25px;
+    color: rgb(118, 118, 118);
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navItems li:hover a,
+.links svg:hover{
+    color: #164274;
+}
+
+.links a{
+    font-size: 3%;
+    color: #474747;
+    margin: 25px 10px;
+}
+
+/* ----------- Corpo da pagina ------------- */
+
+.embrulho2{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: calc(100vh - 80px);
+    justify-content: center;
+    align-items: center;
+    padding: 0 20%;
+    gap: 0.4rem;
+    overflow: visible;
+    z-index: 9;
+}
+
+.embrulho2::before {
+    position: absolute;
+    content: '';
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    left: -12%;
+    top: 40%;
+    background: linear-gradient(54deg,#072c72,#d4e2f3);
+    animation: object1 linear 4s infinite;
+}
+.embrulho2::after {
+    position: absolute;
+    content: '';
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    left: 35%;
+    top: 12%;
+    background: linear-gradient(45deg,#072c72,#d4e2f3);
+    animation: object2 linear 4s infinite;
+    z-index: -6;
+}
+
+@keyframes object1{
+    50%{
+        left: -13%;
+        top:41%;
+    }
+}
+
+@keyframes object2{
+    50%{
+        left: 35%;
+        top:10%;
+    }
+}
+
+
+.cols{
+    width: 50%;
+}
+
+.cols2{
+    position: relative;
+    top: 15%;
+    z-index: 7;
+}
+
+.cols3{
+    position: relative;
+    top: 30%;
+}
+
+.cols4{
+    position: relative;
+    top: 45%;
+}
+
+
+.topline{
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: #474747;
+}
+
+.topline::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 255px;
+    bottom: 10px;
+    background-color: #164274;
+} 
+
+
+h1{
+    display: block;
+    font-size: 7em;
+    font-weight: 900;
+    color:  rgb(118, 118, 118);
+}
+
+.titulo{
+    display: flex;
+    font-size: 20px;
+    color:  #092e58;
+}
+
+p{
+    display: block;
+    width: 90%;
+    font-size: 1.5em;
+    color: #191927;
+    font-family: 'Caveat', cursive;
+}
+
+.pag{
+    display: block;
+    width: 100%;
+    margin-top: 2%;
+    font-size: 1.5em;
+    color: #181f31;
+    font-style: italic;
+    font-weight: 100;
+    font-family: 'Montserrat', cursive;
+}
+
+/* ----------------------------------------------------------------- Segundo Container --------------------------------------------------------------- */
+
+
+.container2{
+    width: 100%;
+    height: 100%;
+    margin-top: 5vh;
+    padding: 0;
+    background-color: #ffffff00;
+    box-shadow: #191927 unset 0 0 4;
+}
+
+/* ----------- Rodapé ------------ */
+
+.classeseparada{
+    position: relative;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 0 7%;
+    gap: 0.4rem;
+    overflow: hidden;
+    background-color: #d8d5d5;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 70;
+    box-shadow: 2px 1px 10px 0px rgba(0,0,0,1);
+}
+
+.topline2{
+    display: "";
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: #474747;
+}
+
+.topline2::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 225px;
+    bottom: 10px;
+    background-color: #164274;
+}
+
+.cols6{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 50%;
+    z-index: 7;
+}
+
+.pag1{
+    display: block;
+    width: 90%;
+    font-size: 2em;
+    color: #140835;
+    font-family: 'Caveat', cursive;
+}
+
+

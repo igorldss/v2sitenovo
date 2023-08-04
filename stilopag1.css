@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+/* ----------------------------------------------------------------- Espaçamento Geral --------------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace
+}
+
+body {
+    overflow-y: hidden; 
+}
+
+/* ----------------------------------------------------------------- Primeiro container --------------------------------------------------------------- */
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+/* ------------ Barra de navegação ------------ */
+
+nav {
+    /* position: absolute; */
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    z-index: 111;
+    line-height: 80px;
+}
+
+.logo {
+    display: flex;
+    font-size: 40px;
+    font-style:italic;
+    font-weight: lighter;
+    color: #232c39;
+    letter-spacing: 4px;
+    cursor: pointer;
+    font-family: 'Caveat', cursive;
+}
+
+.navItems {
+    display: flex;
+}
+
+.navItems li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navItems li a {
+    font-size: 25px;
+    color: rgb(118, 118, 118);
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navItems li:hover a,
+.links svg:hover{
+    color: #164274;
+}
+
+
+.links a{
+    font-size: 3%;
+    color: #474747;
+    margin: 25px 10px;
+}
+
+/* ----------- Corpo da pagina ------------- */
+
+.embrulho{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 80px);
+    justify-content: center;
+    align-items: center;
+    padding: 0 7%;
+    gap: 0.4rem;
+    overflow: visible;
+}
+
+.embrulho::before{
+    position: absolute;
+    content: '';
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    left: -12%;
+    top: 40%;
+    background: linear-gradient(45deg,#072255,#a4c1e2);
+    animation: object1 linear 4s infinite;
+}
+
+.embrulho::after{
+    position: absolute;
+    content: '';
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    left: 35%;
+    top: 12%;
+    background: linear-gradient(35deg,#072255,#a4c1e2);
+    animation: object2 linear 4s infinite;
+}
+
+
+@keyframes object1{
+    50%{
+        left: -13%;
+        top:41%;
+    }
+}
+
+@keyframes object2{
+    50%{
+        left: 35%;
+        top:10%;
+    }
+}
+
+
+.cols{
+    width: 50%;
+
+}
+
+.cols0{
+    width: 50%;
+    z-index: 7;
+}
+
+.cols1{
+    width: 50%;
+    z-index: 7;
+}
+
+
+.toplineafs{
+    
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: #474747;
+}
+
+
+.toplineafs::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: #164274;
+}
+
+
+h1{
+    display: block;
+    font-size: 7em;
+    font-weight: 900;
+    color: #646464;
+}
+
+.titulo{
+    display: flex;
+    font-size: 20px;
+    color: #646464;
+}
+
+.multitext{
+    color: #0f2c4d;
+    text-transform: capitalize;
+}
+
+p{
+    display: block;
+    width: 90%;
+    font-size: 1.5em;
+    color: #191927;
+    font-family: 'Caveat', cursive;
+}
+
+.pag{
+    display: block;
+    width: 90%;
+    font-size: 2em;
+    color: #140835;
+    font-family: 'Caveat', cursive;
+}
+
+#textounico{
+    text-decoration: none;
+    list-style-type: none;
+    color: #ffffff;
+}
+
+.btns{
+    width: 100%;
+    position: relative;
+    left: 150px;
+}
+
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #164274;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0,0,0,0.4);
+}
+
+button:hover{
+    background-color: #5f6f80;
+}
+
+.imgbox{
+    width: 100%;
+    height: 100%;
+}
+
+.imgbox img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 105px;
+    left: 15%;
+    z-index: 10;
+    border-radius: 200px 0px 300px 300px;
+/*     -moz-border-radius: 20px 0px 200px 200px;
+    -webkit-border-radius: 20px 0px 200px 200px;
+    border: 0px solid #000000;
+    border-color: #072255; */
+    animation: animateUser 3s linear infinite;
+}
+
+@media(max-width: 1200px){
+    #imgcontent{
+        display: none;
+    }
+}
+
+@keyframes animateUser{
+    50%{
+        right: 30px;
+        top: 90px
+    }
+}
+
