@@ -216,6 +216,7 @@ p{
 /* ----------- Rodapé ------------ */
 
 .classeseparada{
+    margin-top: 20vh;
     position: relative;
     display: flex;
     justify-content:flex-start;
@@ -262,5 +263,3 @@ p{
     color: #140835;
     font-family: 'Caveat', cursive;
 }
-
-
