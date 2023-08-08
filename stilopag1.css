@@ -25,7 +25,7 @@ body {
 /* ------------ Barra de navegação ------------ */
 
 nav {
-    /* position: absolute; */
+    position: absolute;
     display: flex;
     width: 100%;
     justify-content: space-around;
