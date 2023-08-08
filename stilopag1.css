@@ -79,10 +79,10 @@ nav {
 .embrulho{
     display: flex;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 0px);
     justify-content: center;
     align-items: center;
-    padding: 0 7%;
+    padding: 0 10%;
     gap: 0.4rem;
     overflow: visible;
 }
