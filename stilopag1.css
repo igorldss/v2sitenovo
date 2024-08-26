@@ -11,12 +11,12 @@
 }
 
 body {
-    overflow-y: hidden; 
+    overflow-y: hidden;
 }
 
 /* ----------------------------------------------------------------- Primeiro container --------------------------------------------------------------- */
 
-.container{
+.container {
     width: 100%;
     min-height: 100vh;
     background-color: #ffffff;
@@ -37,7 +37,7 @@ nav {
 .logo {
     display: flex;
     font-size: 40px;
-    font-style:italic;
+    font-style: italic;
     font-weight: lighter;
     color: #232c39;
     letter-spacing: 4px;
@@ -63,12 +63,12 @@ nav {
 }
 
 .navItems li:hover a,
-.links svg:hover{
+.links svg:hover {
     color: #164274;
 }
 
 
-.links a{
+.links a {
     font-size: 3%;
     color: #474747;
     margin: 25px 10px;
@@ -76,7 +76,7 @@ nav {
 
 /* ----------- Corpo da pagina ------------- */
 
-.embrulho{
+.embrulho {
     display: flex;
     width: 100%;
     height: calc(100vh - 0px);
@@ -87,7 +87,7 @@ nav {
     overflow: visible;
 }
 
-.embrulho::before{
+.embrulho::before {
     position: absolute;
     content: '';
     height: 600px;
@@ -95,11 +95,11 @@ nav {
     border-radius: 50%;
     left: -12%;
     top: 40%;
-    background: linear-gradient(45deg,#072255,#a4c1e2);
+    background: linear-gradient(45deg, #072255, #a4c1e2);
     animation: object1 linear 4s infinite;
 }
 
-.embrulho::after{
+.embrulho::after {
     position: absolute;
     content: '';
     height: 200px;
@@ -107,44 +107,44 @@ nav {
     border-radius: 50%;
     left: 35%;
     top: 12%;
-    background: linear-gradient(35deg,#072255,#a4c1e2);
+    background: linear-gradient(35deg, #072255, #a4c1e2);
     animation: object2 linear 4s infinite;
 }
 
 
-@keyframes object1{
-    50%{
+@keyframes object1 {
+    50% {
         left: -13%;
-        top:41%;
+        top: 41%;
     }
 }
 
-@keyframes object2{
-    50%{
+@keyframes object2 {
+    50% {
         left: 35%;
-        top:10%;
+        top: 10%;
     }
 }
 
 
-.cols{
+.cols {
     width: 50%;
 
 }
 
-.cols0{
-    width: 50%;
-    z-index: 7;
-}
-
-.cols1{
+.cols0 {
     width: 50%;
     z-index: 7;
 }
 
+.cols1 {
+    width: 50%;
+    z-index: 7;
+}
 
-.toplineafs{
-    
+
+.toplineafs {
+
     display: block;
     position: relative;
     font-size: 35px;
@@ -153,7 +153,7 @@ nav {
 }
 
 
-.toplineafs::after{
+.toplineafs::after {
     position: absolute;
     content: '';
     height: 4px;
@@ -163,25 +163,25 @@ nav {
 }
 
 
-h1{
+h1 {
     display: block;
     font-size: 7em;
     font-weight: 900;
     color: #646464;
 }
 
-.titulo{
+.titulo {
     display: flex;
     font-size: 20px;
     color: #646464;
 }
 
-.multitext{
+.multitext {
     color: #0f2c4d;
     text-transform: capitalize;
 }
 
-p{
+p {
     display: block;
     width: 90%;
     font-size: 1.5em;
@@ -189,7 +189,7 @@ p{
     font-family: 'Caveat', cursive;
 }
 
-.pag{
+.pag {
     display: block;
     width: 90%;
     font-size: 2em;
@@ -197,19 +197,19 @@ p{
     font-family: 'Caveat', cursive;
 }
 
-#textounico{
+#textounico {
     text-decoration: none;
     list-style-type: none;
     color: #ffffff;
 }
 
-.btns{
+.btns {
     width: 100%;
     position: relative;
     left: 150px;
 }
 
-button{
+button {
     outline: none;
     border: none;
     cursor: pointer;
@@ -221,19 +221,19 @@ button{
     margin: 40px 5px;
     letter-spacing: 2px;
     text-transform: capitalize;
-    box-shadow: 0 15px 10px rgba(0,0,0,0.4);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
 }
 
-button:hover{
+button:hover {
     background-color: #5f6f80;
 }
 
-.imgbox{
+.imgbox {
     width: 100%;
     height: 100%;
 }
 
-.imgbox img{
+.imgbox img {
     position: relative;
     height: 100%;
     width: 100%;
@@ -241,23 +241,86 @@ button:hover{
     left: 15%;
     z-index: 10;
     border-radius: 200px 0px 300px 300px;
-/*     -moz-border-radius: 20px 0px 200px 200px;
-    -webkit-border-radius: 20px 0px 200px 200px;
-    border: 0px solid #000000;
-    border-color: #072255; */
     animation: animateUser 3s linear infinite;
 }
 
-@media(max-width: 1200px){
-    #imgcontent{
+@media(max-width: 768px) {
+    #imgcontent {
         display: none;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .navItems {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: #102036;
+        margin-right: 20px;
+        line-height: 80px;
+    }
+
+    .navItems.active{
+        display: block;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        background-color: #ffffff;
+        text-align: center;
+        z-index: 1000;
+        animation: slideDown 0.5s ease forwards;
+    }
+
+    .navItems li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .embrulho {
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .btns {
+        left: 0;
+    }
+
+    .imgbox img {
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .cols {
+        width: max-content;
+        padding: 5px;
     }
 }
 
-@keyframes animateUser{
-    50%{
+@keyframes animateUser {
+    50% {
         right: 30px;
         top: 90px
     }
 }
 
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
