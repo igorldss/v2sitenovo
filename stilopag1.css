@@ -244,37 +244,64 @@ button:hover {
     animation: animateUser 3s linear infinite;
 }
 
-@media(max-width: 768px) {
+.menu_icon{
+    display: none;
+}
+
+@media(max-width: 1100px) {
+
+    /*Faz com que os links de redes sociais não apareçam na barra de navegações*/
+    .links{ 
+        display: none;
+    }
+
+     /*Faz com que a imagem não apareça em telas de dispositivos moveis*/
     #imgcontent {
         display: none;
     }
 
     .logo {
-        font-size: 24px;
+        font-size: 34px;
     }
 
-    .navItems {
-        display: none;
-    }
-
-    .menu-icon {
+    
+    .menu_icon {
         display: block;
         font-size: 30px;
         cursor: pointer;
         color: #102036;
         margin-right: 20px;
         line-height: 80px;
+        -webkit-tap-highlight-color: transparent;
     }
-
+    
+    .navItems {
+        transform: translateY(-100%);
+        opacity: 0;
+        display: none;
+        
+    }
     .navItems.active{
         display: block;
         position: absolute;
-        top: 80px;
+        top: 100%;
         width: 100%;
         background-color: #ffffff;
         text-align: center;
         z-index: 1000;
-        animation: slideDown 0.5s ease forwards;
+        line-height: 300px;
+        animation: slideDown 1.0s ease forwards;
+    }
+    .navItems.closing {
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        background-color: #ffffff;
+        text-align: center;
+        z-index: 1000;
+        line-height: 300px;
+        animation: slideUp 1.0s ease forwards;
     }
 
     .navItems li {
@@ -324,3 +351,14 @@ button:hover {
         opacity: 1;
     }
 }
+@keyframes slideUp {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+
